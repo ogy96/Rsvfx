@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.XR;
+using UnityEngine.VFX;
+
 
 public class RsARBackgroundRenderer : MonoBehaviour
 {
     public RsFrameProvider Source;
     public Material material;
     private Camera cam;
-    private ARBackgroundRenderer bg;
+    //private ARBackgroundRenderer bg;
     private Intrinsics intrinsics;
     private RenderTexture rt;
 
@@ -28,12 +30,12 @@ public class RsARBackgroundRenderer : MonoBehaviour
 
         cam = GetComponent<Camera>();
 
-        bg = new ARBackgroundRenderer()
+        /*bg = new ARBackgroundRenderer()
         {
             backgroundMaterial = material,
             mode = ARRenderMode.MaterialAsBackground,
             backgroundTexture = material.mainTexture
-        };
+        };*/
 
         cam.depthTextureMode |= DepthTextureMode.Depth;
 
@@ -56,7 +58,7 @@ public class RsARBackgroundRenderer : MonoBehaviour
         light.AddCommandBuffer(LightEvent.AfterScreenspaceMask, copyScreenSpaceShadow);
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         if (bg != null)
             bg.mode = ARRenderMode.MaterialAsBackground;
@@ -66,7 +68,7 @@ public class RsARBackgroundRenderer : MonoBehaviour
     {
         if (bg != null)
             bg.mode = ARRenderMode.StandardBackground;
-    }
+    }*/
 
     void Update()
     {

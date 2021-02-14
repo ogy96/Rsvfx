@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Simple.unity
     guid: 639f7ac07673ef2f89c179e52d2fc3b0
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: bb79fd3e06d188e4289bbb19e02e4c93,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 70a2b0a8e96af7145a2f38685c4bc287,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0b4b0f10603eabc48aeb3a8ca044fc16,
+      type: 2}
